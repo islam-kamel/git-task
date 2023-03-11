@@ -13,9 +13,9 @@ const LogIN = () => {
     })
     function handelInput(e) {
         setuser({ ...user, [e.target.name]: e.target.value })
-        if (e.target.name == 'userName') {
+        if (e.target.name === 'userName') {
             seterrors({ ...errors, errorusername: (e.target.value.length == 0) ? 'username is required' : (e.target.value.includes(' ') ? 'username isnot contain any spaces' : '') })
-        } else if (e.target.name == 'password') {
+        } else if (e.target.name === 'password') {
             seterrors({ ...errors, errorpassword: (e.target.value.length == 0) ? 'password is required' : (e.target.value.length < 8) ? 'password must > 8 charctars' : ((/[A-Z]/.test(e.target.value) ?
                     (/[a-z]/.test(e.target.value) ?
                         (/[@#$%?*&]/.test(e.target.value) ? "" : "password AAAggj@") : "password AAAggj@") : "password AAAggj@"))
