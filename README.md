@@ -24,5 +24,5 @@
     |--------- logIN.js
     |--------- LogIN.css
     |----- RenderDown/
-    |----- RenderDown.js
+    |--------- RenderDown.js
     |----- Movies.jsx
