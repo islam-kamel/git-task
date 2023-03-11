@@ -3,7 +3,6 @@ import "./LogIN.css"
 import {Link} from "react-router-dom";
 
 const LogIN = () => {
-    const [username, setUsername] = useState("");
     const [user, setuser] = useState({
         password:'',
         username:''
@@ -33,8 +32,6 @@ const LogIN = () => {
                 </div>
                 <div className="text-center mt-4 name">
                     Log In
-
-                    <p className="mt-3">{username}</p>
                 </div>
                 <form className="p-3 mt-3">
                     <div className="form-field d-flex align-items-center">
