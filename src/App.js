@@ -1,11 +1,11 @@
-import RenderDown from "./components/RenderDown/RenderDown";
+import Movies from "./components/Movies";
 
 function App() {
-  return (
-    <div>
-        <RenderDown></RenderDown>
-    </div>
-  );
+    return (
+        <div>
+            <Movies/>
+        </div>
+    );
 }
 
 export default App;
