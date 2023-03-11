@@ -10,9 +10,10 @@
  - Islam kamel
 
 ## Feature
-- Live Render Markdown Editor
-- Login Form
-- List top movies in themoviesDb
+- Navbar `(Islam Kamel)`
+- Live Render Markdown Editor `(Islam Kamel)`
+- Login Form `(Safaa Abd Elnasser & Engy Mohamed)`
+- List top movies in themoviesDb `(Ahmed Khaled & Mostafa Abd El Hady)`
 
 ---
     src/
