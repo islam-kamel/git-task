@@ -1,10 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import Movies from "./Commponint/Movies";
 
 function App() {
   return (
     <div>
       <h1>Git Task</h1>
+      <Movies/>
     </div>
   );
 }
