@@ -1,10 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import RenderDown from "./components/RenderDown/RenderDown";
 
 function App() {
   return (
     <div>
-      <h1>Git Task</h1>
+        <RenderDown></RenderDown>
     </div>
   );
 }
