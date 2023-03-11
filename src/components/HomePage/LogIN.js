@@ -4,8 +4,24 @@ import {Link} from "react-router-dom";
 
 const LogIN = () => {
     const [username, setUsername] = useState("");
+    const [user, setuser] = useState({
+        password:'',
+        username:''
+    });
+    const [errors, seterrors] = useState({
+        errorpassword:'',
+        errorusername:''
+    })
     function handelInput(e) {
-        setUsername(e.target.value)
+        setuser({ ...user, [e.target.name]: e.target.value })
+        if (e.target.name == 'userName') {
+            seterrors({ ...errors, errorusername: (e.target.value.length == 0) ? 'username is required' : (e.target.value.includes(' ') ? 'username isnot contain any spaces' : '') })
+        } else if (e.target.name == 'password') {
+            seterrors({ ...errors, errorpassword: (e.target.value.length == 0) ? 'password is required' : (e.target.value.length < 8) ? 'password must > 8 charctars' : ((/[A-Z]/.test(e.target.value) ?
+                    (/[a-z]/.test(e.target.value) ?
+                        (/[@#$%?*&]/.test(e.target.value) ? "" : "password AAAggj@") : "password AAAggj@") : "password AAAggj@"))
+            })
+        }
     }
     return (
         <>
@@ -25,10 +41,16 @@ const LogIN = () => {
                         <span className="far fa-user"></span>
                         <input onChange={(e) => handelInput(e)} type="text" name="userName" id="userName" placeholder="Username"/>
                     </div>
+                    <p className='text-danger'>
+                        {errors.errorusername}
+                        </p> 
                     <div className="form-field d-flex align-items-center">
                         <span className="fas fa-key"></span>
-                        <input type="password" name="password" id="pwd" placeholder="Password"/>
+                        <input type="password" onChange={(e) => handelInput(e)} name="password" id="pwd" placeholder="Password"/>
                     </div>
+                    <p className='text-danger'>
+                        {errors.errorpassword}
+                        </p> 
                     <button className="btn mt-3">Login</button>
                 </form>
                 <div className="text-center fs-6">
@@ -40,3 +62,7 @@ const LogIN = () => {
 }
 
 export default LogIN;
+ 
+    
+      
+    
